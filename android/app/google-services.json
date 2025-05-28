@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "751784868756",
+    "project_id": "roadsaver-81755282",
+    "storage_bucket": "roadsaver-81755282.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751784868756:android:955f724c1fdd98732ead81",
+        "android_client_info": {
+          "package_name": "com.example.bookly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWLJuQq-lqhQeg90rrlQRFETUdfaOmKWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

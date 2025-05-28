@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Login_page.dart'; // Import login page for navigation
 
-class signup_page extends StatelessWidget {
-  const signup_page({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +124,7 @@ class signup_page extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {
                     Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const login_page()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
                   child: const Text(

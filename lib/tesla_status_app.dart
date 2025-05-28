@@ -54,7 +54,7 @@ class TeslaStatusPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Color(0xFF1E1E1E).withAlpha(128),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Text(
