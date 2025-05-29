@@ -12,28 +12,17 @@ class LanguageProvider with ChangeNotifier {
     _loadLanguage();
   }
 
-  Future<void> setLanguage(String languageCode) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString(_languageKey, languageCode);
-      _locale = Locale(languageCode);
-      debugPrint('Language changed to ${locale.languageCode}');
-      notifyListeners();
-    } catch (e) {
-      debugPrint('Error saving language: $e');
-    }
+  void setLanguage(String languageCode) async {
+    _locale = Locale(languageCode);
+    notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_languageKey, languageCode);
   }
 
-  Future<void> _loadLanguage() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final savedLanguage = prefs.getString(_languageKey);
-      if (savedLanguage != null) {
-        _locale = Locale(savedLanguage);
-        notifyListeners();
-      }
-    } catch (e) {
-      print('Error loading language: $e');
-    }
+  void _loadLanguage() async {
+    final prefs = await SharedPreferences.getInstance();
+    final languageCode = prefs.getString(_languageKey) ?? 'en';
+    _locale = Locale(languageCode);
+    notifyListeners();
   }
 }
